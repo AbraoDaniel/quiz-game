@@ -1,50 +1,53 @@
-# React + TypeScript + Vite
+<h1 align="center">
+  <br>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+  <img src="https://github.com/user-attachments/assets/88e3eed5-096a-474d-8842-34d4b7bcfa14" alt="danti-logo" width="180">
+  
+  <br>
+  Show do Brutinho
+  <br>
+</h1>
 
-Currently, two official plugins are available:
+<h4 align="center">A quiz game inspired in "Show do milhão"</h4>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<p align="center">
+  <a href="#about-the-project">About the project</a> •
+  <a href="#how-to-use">How to use</a> •
+  <a href="#demonstration">Demonstration</a> •
+  <a href="#contact">Contact</a>
+</p>
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Demonstration
+<div align="center">
 
-- Configure the top-level `parserOptions` property like this:
+  
+</div>
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+
+## About the project
+
+ 
+
+## How to use
+
+```bash
+
+# Clone this repository
+$ git clone https://github.com/AbraoDaniel/quiz-game.git
+
+# Install dependencies
+$ npm install
+
+# Run application
+$ npm run dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Contact
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+<div> 
+  <a href = "mailto:abraodaniel@hotmail.com"><img src="https://img.shields.io/badge/-Outlook-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+  <a href="https://www.linkedin.com/in/daniel-alexsandro-abrão-2002/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
+  <a href = "mailto:danabrao@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+</div>
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
