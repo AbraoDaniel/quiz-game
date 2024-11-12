@@ -156,7 +156,7 @@ const QuestionPage: React.FC = () => {
       <Col xs={14}>
         <div style={{backgroundColor: 'black', height: '100vh', display: 'grid', justifyContent: 'center'}}>
           <Row justify="space-between" style={{alignItems: 'center'}}>
-            <Button style={{backgroundColor: '#303030', color: 'white'}} onClick={() => navigate('/')}>
+            <Button className="question-button" style={{backgroundColor: '#303030', color: 'white'}} onClick={() => navigate('/')}>
               {'Finalizar partida'}
             </Button>
             <div style={{ width: 150, height: 25, display: 'flex'}}>
@@ -183,10 +183,10 @@ const QuestionPage: React.FC = () => {
             {questions[questionIndex]?.title}
           </Card>
           
-          <div style={{width: '50vw', height: '50vh'}}>
+          <div  style={{width: '50vw', height: '50vh'}}>
           {answers[questionIndex]?.map((answer) => {
             return (
-              <Button style={{
+              <Button className="question-button" style={{
                 display: 'flex',
                 width: '100%', 
                 padding: 15, 

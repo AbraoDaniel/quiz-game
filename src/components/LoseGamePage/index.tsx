@@ -15,7 +15,7 @@ const LoseGamePage: React.FC = () => {
       <Col xs={14}>
         <div style={{backgroundColor: 'black', height: '100vh', display: 'grid', justifyContent: 'center'}}>
           <Row justify="space-between" style={{alignItems: 'center'}}>
-            <Button style={{backgroundColor: '#303030', color: 'white'}} onClick={() => navigate('/')}>
+            <Button className="question-button" style={{backgroundColor: '#303030', color: 'white'}} onClick={() => navigate('/')}>
               {'Retornar à tela inicial'}
             </Button>
           </Row>
@@ -35,14 +35,16 @@ const LoseGamePage: React.FC = () => {
         <Modal 
           title="Limite de tentativas atingido" 
           open={true} 
+          className="attempt-limit"
           cancelButtonProps={{style: {display: 'none'}}}
+          onCancel={() => setShowLoseGameModal(false)}
           footer={[
-            <Button key="back" style={{ backgroundColor: '#ffb6b6' }} onClick={() => setShowLoseGameModal(false)}>
+            <Button key="back" className="return-to-init-page-button" onClick={() => setShowLoseGameModal(false)}>
               Visualizar relatório
             </Button>
           ]}
-        >
-          <Typography>
+          >
+          <Typography >
             {'Você atingiu o limite de tentativas, mas não fique triste, você pode tentar novamente quando quiser!'}
           </Typography>
         </Modal>

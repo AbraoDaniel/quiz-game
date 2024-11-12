@@ -13,31 +13,12 @@ const HomePage: React.FC = () => {
   return (
     <Row style={{width: '100vw'}}>
       <Col xs={14}>
-        <div style={{backgroundColor: 'black', height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-          <div style={{width: '50vw', height: '50vh', alignItems: 'center', display: 'flex'}}>
+        <div style={{backgroundColor: 'black', height: '100vh', display: 'grid', alignItems: 'center', justifyContent: 'center'}}>
+          <div style={{width: '50vw', alignItems: 'center', justifyContent: 'center', display: 'flex'}}>
+            <p className="title-home-page">UM QUIZ DIVERTIDO E EDUCATIVO</p>
+          </div>
+          <div style={{width: '50vw', height: '50vh', alignItems: 'center', justifyContent: 'center', display: 'flex'}}>
             <InitGameButton onClick={() => navigate('/questions')}/>
-            {/* {buttons?.map((button) => {
-              return (
-                <Button style={{
-                  display: 'flex',
-                  width: '100%', 
-                  padding: 15, 
-                  alignItems: 'center', 
-                  backgroundColor: 'black', 
-                  height: '11vh', 
-                  fontSize: 36, 
-                  marginBottom: 20,
-                  color: 'white',
-                  justifyContent: 'center',
-                  boxShadow: '2px 5px 10px black',
-                  borderRadius: '10px',
-                }}
-                onClick={() => navigate(button.path)}
-                  >
-                  {button.title}
-                </Button>
-              )
-            })} */}
           </div>
         </div>
       </Col>
