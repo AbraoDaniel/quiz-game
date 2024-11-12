@@ -1,6 +1,8 @@
 <h1 align="center">
   <br>
-  <img src="https://github.com/user-attachments/assets/5c53bbf9-b9c9-4ee9-a554-9c2418016976" alt="danti-logo" width="180">
+
+  <img src="https://github.com/user-attachments/assets/88e3eed5-096a-474d-8842-34d4b7bcfa14" alt="danti-logo" width="180">
+  
   <br>
   Show do Brutinho
   <br>
