@@ -33,7 +33,7 @@ const ResultBoard: React.FC<IResultBoard> = ({points, questionsQtd, errors}) => 
                 {errors?.filter((a: {question: string}) => a?.question !== undefined)?.map((wrongQuestion) => {
                   return (
                     <p>
-                      {`Na questão ${wrongQuestion.question + 1}, você respondeu ${wrongQuestion.userAnswer}, mas a resposta era ${wrongQuestion.correctAnswer}`}
+                      {`Na ${wrongQuestion.question + 1}ª questão, você respondeu ${wrongQuestion.userAnswer}, mas a resposta era ${wrongQuestion.correctAnswer}`}
                     </p>
                   )
                 })}
