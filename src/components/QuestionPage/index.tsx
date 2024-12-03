@@ -13,7 +13,7 @@ const QuestionPage: React.FC = () => {
   const [errorQuestions, setErrorQuestions] = useState<any>([]);
   const [points, setPoints] = useState(0);
   const [count, setCount] = useState(3);
-  const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null); // Estado para a resposta selecionada
+  const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
 
   useEffect(() => {
     if (count === 0) {
@@ -24,13 +24,13 @@ const QuestionPage: React.FC = () => {
   }, [count, errorQuestions, navigate, points]);
 
   useEffect(() => {
-    if (questionIndex === questions.length) {
+    if (questionIndex === questions.length || points === 10) {
       navigate("/win_game", { state: { points } });
     }
   }, [questionIndex, questions.length, navigate, points]);
 
   function handleAnswer(answer: string) {
-    setSelectedAnswer(answer); // Define a resposta selecionada
+    setSelectedAnswer(answer);
     if (questions[questionIndex]?.correctAnswer === answer) {
       setPoints((state) => state + 1);
     } else {
@@ -44,10 +44,9 @@ const QuestionPage: React.FC = () => {
       ]);
       setCount((state) => state - 1);
     }
-    // Avança para a próxima pergunta com um delay
     setTimeout(() => {
       setQuestionIndex((state) => state + 1);
-      setSelectedAnswer(null); // Reseta a seleção da resposta
+      setSelectedAnswer(null); 
     }, 1000);
   }
 
@@ -121,7 +120,7 @@ const QuestionPage: React.FC = () => {
                     alignItems: "center",
                     backgroundColor,
                     height: "11vh",
-                    fontSize: 36,
+                    fontSize: answer?.description?.length < 35 ? 36 : 22,
                     marginBottom: 20,
                     color: "white",
                     justifyContent: "start",

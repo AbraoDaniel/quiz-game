@@ -17,18 +17,16 @@ const WinGamePage: React.FC = () => {
   const { points } = location.state || {};
 
   useEffect(() => {
-    // Gerar balões dinamicamente
     const interval = setInterval(() => {
       setBalloons((prev) => [
         ...prev,
         {
-          xPos: Math.random() * 100, // Gera posição horizontal aleatória
-          hue: Math.random() * 360, // Gera tonalidade fixa
+          xPos: Math.random() * 100,
+          hue: Math.random() * 360,
         },
       ]);
-    }, 300); // Adicionar balão a cada 300ms
+    }, 300); 
 
-    // Remover balões após 5 segundos
     const timeout = setTimeout(() => {
       clearInterval(interval);
     }, 10000);
@@ -66,10 +64,10 @@ const WinGamePage: React.FC = () => {
               display: "flex",
               alignItems: "center",
             }}
+            className="win-card"
           >
             <WinBoard points={points} />
           </div>
-          {/* Contêiner para os balões */}
           <div className="balloon-container">
             {balloons.map((balloon, index) => (
               <img
@@ -78,7 +76,7 @@ const WinGamePage: React.FC = () => {
                 className="balloon"
                 style={{
                   "--x-pos": balloon.xPos,
-                  filter: `hue-rotate(${balloon.hue}deg)`, // Aplica tonalidade fixa
+                  filter: `hue-rotate(${balloon.hue}deg)`, 
                 } as React.CSSProperties}
                 alt="Balloon"
               />

@@ -1,14 +1,14 @@
-import { Typography } from "antd"
-
 interface IResultBoard {
   points: number
 }
 const ResultBoard: React.FC<IResultBoard> = ({points}) => {
   return (
-    <div className="card">
-      <div className="win-board" style={{}}>
-        <Typography style={{color: 'white', fontSize: 26, fontWeight: 'bold'}}>{`PARABÉNS!!! Você acertou ${points} questões 🎉`}</Typography>
+    <div className="card wallet">
+      <div className="overlay"></div>
+      <div className="circle">
+          <img src="src/assets/party.png" />
       </div>
+      <p style={{fontSize: 24, fontWeight: 'bold'}}>{`PARABÉNS!!! Você acertou ${points} questões 🎉`}</p>
     </div>
   )
 }

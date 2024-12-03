@@ -42,7 +42,6 @@ const mediumQuestions = [
   { title: "Qual é o nome da técnica que reduz o tempo de computação ao dividir problemas grandes em menores?", tip: "Merge Sort e Quick Sort usam essa técnica.", correctAnswer: "B" },
   { title: "Qual técnica é utilizada para resolver problemas de busca de padrão, como procurar uma substring em uma string?", tip: "Esse algoritmo usa o conceito de prefixos e sufixos.", correctAnswer: "B" },
   { title: "Em grafos e árvores, o que significa a sigla LCA?", tip: "Este termo se refere ao ancestral mais próximo entre dois nós em uma árvore ou grafo.", correctAnswer: "C" },
-  { title: "Dado um grafo não-direcionado com N vértices e M arestas, qual estrutura de dados é mais eficiente para armazená-lo se M for muito maior que N?", tip: "Essa estrutura é mais eficiente em memória para grafos esparsos.", correctAnswer: "A" },
   { title: 'Qual das técnicas abaixo é mais eficiente para resolver um problema de "Menor Caminho" em um grafo com peso uniforme?', tip: "Se os pesos são uniformes, você não precisa de uma fila de prioridade.", correctAnswer: "B" },
 ];
 
@@ -175,12 +174,6 @@ const mediumAnswers = [
     { description: "Least Connected Arc", value: "B" },
     { description: "Lowest Common Ancestor", value: "C" },
     { description: "Longest Connected Ancestry", value: "D" },
-  ],
-  [
-    { description: "Lista de Adjacência", value: "A" },
-    { description: "Matriz de Adjacência", value: "B" },
-    { description: "Heap", value: "C" },
-    { description: "Fila", value: "D" },
   ],
   [
     { description: "Busca Binária", value: "A" },
